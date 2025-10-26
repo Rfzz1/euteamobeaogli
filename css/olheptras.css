@@ -1,0 +1,35 @@
+body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(120deg, hsl(345, 100%, 92%), #ff9aa2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Georgia', serif;
+    }
+
+.olhe-container {
+    background: linear-gradient(120deg, #ffd6e0, #ff9aa2);
+    padding: 3.125rem;
+    border-radius: 1.875rem;
+    text-align: center;
+    box-shadow: 0 0 2.5rem #ff6f61;
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    color: #5a2d36;
+    max-width: 37.5rem;
+    margin: auto;
+    animation: tremor 1.5s ease-in-out infinite;
+    border: solid 0.125rem #ff6f61;
+  }
+
+  h2 {
+    background:none;
+  }
+
+  @keyframes tremor {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-0.313rem); }
+    100% { transform: translateY(0); }
+  }

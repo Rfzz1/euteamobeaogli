@@ -1,0 +1,15 @@
+footer {
+    background: #111;
+    text-align: center;
+    padding: 1.25rem;
+    font-size: 0.875rem;
+    color: #aaa;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+}
+
+footer p {
+    margin: 0;
+    background: #111;
+}

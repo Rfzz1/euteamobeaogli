@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!-- === HEAD === -->
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/playlist.css">
+    <link rel="stylesheet" href="css/botao.css">
+    <link rel="icon" href="img/musica.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa Playlist</title>
+</head>
+
+<!-- === BODY === -->
+<body>
+    <section class="page-transition-container">
+        <section id="page-playlist" class="page-content page-enter">
+            <main>
+                <section id="main-playlist">
+                    <h1 id="main-title" class="josefin-sans-font">Nossa Playlist ❤️</h1>
+                    <p class="main-text" class="josefin-sans-font">
+                        Essa é a nossa playlist meu amor, feita por você! Fiquei muito feliz quando falou que tinha ela!
+                    </p>
+                    <!-- Exemplo de embed de playlist do Spotify -->
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4dYaN7yqLbIruWEI0LJyl8?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    
+                    <p class="main-text josefin-sans-font" id="saturno">
+                        Essa é a música de um dos nossos primeiros beijos amor! E também quando falamos EU TE AMO pela primeira vez!
+                    </p>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/68cPbG7hJnwDW9nPX1uQcX?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+                    <p class="main-text josefin-sans-font" id="saturno">
+                        Essa é a música que quando eu ouço me lembra você! Sei lá, é a nossa vibe ❤️
+                    </p>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2XyHmHCOvNogoRiWBA1L1I?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+                    <p class="main-text josefin-sans-font" id="saturno">
+                        Aí eu penso o tempo inteiro e até bate o desespero, o que sou eu sem ela?
+                    </p>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0ewILojeKPTZW4KtTL9cYf?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+                    <p class="main-text josefin-sans-font" id="saturno">
+                        Eu tô apaixonado, eu tô contando tudo e não tô nem ligando pro que vão dizer. Amar não é pecado, e se eu tiver errado. Que se dane o mundo, eu só quero você!
+                    </p>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0niJwkH3aqLf8FZC4nvAaQ?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <p class="main-text josefin-sans-font" id="saturno">
+                        Amo te chamar de meu amor! E amo ser seu amor também! ❤️
+                    </p>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0uwaiApk6k7k9POyFjTKeR?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <p class="main-text josefin-sans-font" id="saturno">
+                        Amo a luz dos olhos teus!
+                    </p>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4SpqtLElDsO6KGbd4ub96Z?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </section>
+            </main>
+
+            <section id="botao">
+                <button onclick="location.href='votacao.html'" id="iniciar">Faça uma Escolha ❤️</button>
+            </section>
+
+            <!-- === FOOTER === -->
+            <footer>
+                <p>&copy; 2025 - De Rafa para Bea</p>
+            </footer>
+        </section>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = document.getElementById('page-playlist');
+            // Adiciona a classe de entrada quando a página carrega
+            currentPage.classList.add('page-enter-active');
+        });
+    </script>
+</body>
+</html>

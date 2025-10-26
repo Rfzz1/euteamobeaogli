@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faça seu Voto</title>
+  <link rel="icon" href="img/voto.png" type="image/png">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/votacao.css">
+  <link rel="stylesheet" href="css/botao.css">
+  <link rel="stylesheet" href="css/pagina2.css">
+</head>
+<body>
+  <main>
+    <h1 id="titulo">Qual dessas é a sua foto preferida?</h1>
+    <h4>Obs: Ative a opção Site para Computador</h4>
+
+    <form id="form-votacao">
+      <section id="conteudo">
+        <section class="varal" id="varal-fotos">
+          <!-- As fotos serão geradas via JS -->
+        </section>
+      </section>
+
+      <section id="botao">
+        <button type="submit" id="iniciar">Votar 💗</button>
+      </section>
+    </form>
+
+    <section id="resultado" style="display:none;">
+      <h1>Essas são suas fotos preferidas, meu amor! ❤️</h1>
+      <section class="varal" id="fotos-escolhidas"></section>
+      <section id="botao">
+        <button id="iniciar" onclick="window.location.href='cartinha.html'">Uma cartinha pra você 💌</button>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - De Rafa para Bea</p>
+  </footer>
+
+  <script>
+    const fotos = [
+      "meuwallpaper", "lindoscomfubs", "chuquinhas", "quebracabeca", "fotospref",
+      "espelho-linods", "aniversariotia-lindos", "aniversariotia-sorrindo", "pizzacoracao",
+      "casadavovis", "lindosfiltrosnap", "noseoshrek", "dumpdefotos-expressoescachorro",
+      "dumpdefotos2", "cinemastitch", "fubs1", "fubs2", "fubs4", "lindos", "solzinho",
+      "pft", "fofos", "bealinda", "Olhos"
+    ];
+
+    const varal = document.getElementById("varal-fotos");
+    const form = document.getElementById("form-votacao");
+    const resultado = document.getElementById("resultado");
+    const fotosEscolhidasEl = document.getElementById("fotos-escolhidas");
+    const max = 3;
+
+    // Gera todas as fotos dinamicamente
+    fotos.forEach(foto => {
+      const label = document.createElement("label");
+      label.classList.add("custom-radio");
+      label.innerHTML = `
+        <input type="checkbox" class="limite-checkbox" value="${foto}">
+        <span class="checkmark"></span>
+        <img src="img/${foto}.jpg" alt="${foto}" class="imagens">
+      `;
+      varal.appendChild(label);
+    });
+
+    // Limite de seleção
+    const checkboxes = document.querySelectorAll(".limite-checkbox");
+    checkboxes.forEach(cb => {
+      cb.addEventListener("change", () => {
+        const selecionadas = document.querySelectorAll(".limite-checkbox:checked");
+        if (selecionadas.length > max) {
+          cb.checked = false;
+          alert(`Você só pode escolher no máximo ${max} fotos!`);
+        }
+      });
+    });
+
+    // Quando clicar em "Votar"
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      const selecionadas = [...document.querySelectorAll(".limite-checkbox:checked")].map(cb => cb.value);
+      if (selecionadas.length === 0) {
+        alert("Escolha pelo menos uma foto 💗");
+        return;
+      }
+
+      // Mostra o resultado
+      form.style.display = "none";
+      resultado.style.display = "block";
+
+      fotosEscolhidasEl.innerHTML = "";
+      selecionadas.forEach(foto => {
+        const img = document.createElement("img");
+        img.src = `img/${foto}.jpg`;
+        img.classList.add("imagem-escolhida");
+        fotosEscolhidasEl.appendChild(img);
+      });
+
+      // Guarda no localStorage (se quiser usar depois)
+      localStorage.setItem("fotosEscolhidas", JSON.stringify(selecionadas));
+    });
+  </script>
+</body>
+</html>

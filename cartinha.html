@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/cartinha.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="icon" href="img/letter.png" type="image/png">
+    <title>Leia com amor!</title>
+</head>
+<body>
+    
+    <div class="contador">
+    <h1 id="euteamo">Eu te amo há...</h1>
+    <p id="tempo"></p>
+  </div>
+
+  <script>
+    const inicio = new Date("2025-03-29T20:00:00"); // 💡 Mude para a data e hora que quiser
+    const tempo = document.getElementById("tempo");
+
+    function atualizarContador() {
+      const agora = new Date();
+      const diff = agora - inicio;
+
+      const segundos = Math.floor(diff / 1000);
+      const minutos = Math.floor(segundos / 60);
+      const horas   = Math.floor(minutos / 60);
+      const dias    = Math.floor(horas / 24);
+      const meses   = Math.floor(dias / 30.437); // média de dias por mês
+      const anos    = Math.floor(meses / 12);
+
+      const restoMeses = meses % 12;
+      const restoDias = Math.floor(dias % 30.437);
+      const restoHoras = horas % 24;
+      const restoMin = minutos % 60;
+      const restoSeg = segundos % 60;
+
+      tempo.innerText = `${restoMeses} meses, ${restoDias} dias, ${restoHoras} horas, ${restoMin} minutos e ${restoSeg} segundos.`;
+    }
+
+    atualizarContador();
+    setInterval(atualizarContador, 1000);
+  </script>
+
+    <div class="carta">
+        <h1>Oi, meu amor 💌</h1>
+        <p>Eu queria te dizer que você é uma pessoa íncrivel! Tenho muito orgulho de quem você é e sou muito sortudo por ter o privilégio de ter você todos os dias na minha vida. Você me faz tão bem, minha princesa 🫶</p>
+        <p>Já tava há um tempo querendo fazer isso pra você, mas tava esperando juntar umas fotinhos! Amo registrar nossos momentos e é sempre muito especial estar com você</p>
+        <p>Sou muito feliz com o que nós somos amor, eu acho a nossa relação muito boa e tranquila e espero poder viver toda minha vida ao seu lado</p>
+        <p>Tu é muito importante e especial pra mim, minha princesa pra sempre! Pode ter certeza que eu sempre vou estar aqui pra você, pra te aconselhar, te ajudar, chorar e rir com você! Sempre vou estar!</p>
+        <p>Eu Te amo muito Bea❤️</p>
+        <p>— Com carinho, Rafa</p>
+    </div>
+
+    <section id="botao">
+    <button onclick="location.href='olheptras.html'" type="submit" id="iniciar">Voltar ao Início</button>
+    </section>
+
+</body>
+</html>

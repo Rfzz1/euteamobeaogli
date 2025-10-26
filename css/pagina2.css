@@ -1,0 +1,148 @@
+#titulo{
+    color: #f8f9fa;
+    padding: 4rem;
+    text-align: center;
+    font-weight: 600;
+    font-size:2rem;
+}
+
+.subtitulo {
+  color: #f8f9fa;
+  text-align: center;
+  font-weight: 600;
+  font-size:1.3rem;
+}
+
+#conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.varal {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap; /* Faz quebrar a linha se precisar */
+  gap:2rem;
+  margin: 2.5rem auto;
+  position: relative;
+  padding: 2rem 1rem;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.imagens {
+  width: 15.625rem; /* 250px */
+  height: 25rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom:1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0.313rem 0.938rem rgba(0,0,0,0.1);
+}
+
+.imagensmod {
+  width: 15.625rem; /* 250px */
+  height: auto;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom:1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0.313rem 0.938rem rgba(0,0,0,0.1);
+}
+
+.imagens:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+.imagensmod:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+/* Popup */
+#popup-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.375rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+  margin-bottom: 1rem;
+}
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex; /* <- Isso é o que centraliza */
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.popup-overlay.ativo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-content {
+  background: #171919; /* mantém o fundo atual do site */
+  padding: 2rem;
+  border-radius: 1.25rem;
+  width: 90%;
+  max-width: 25rem;
+  text-align: center;
+  box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.6);
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+  color: #f8f9fa;
+  border: 0.375rem solid #7a7f85; /* simula a moldura branca da Polaroid */
+}
+
+.popup-overlay.ativo .popup-content {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.popup-content img {
+  max-width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 0.938rem;
+}
+
+/* Legenda */
+.popup-content h2 {
+  color: #f8f9fa;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.popup-content p {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+/* Botão */
+.popup-content button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.5rem;
+  background: #4d42e6;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.popup-content button:hover {
+  background: #8142e6;
+}
+

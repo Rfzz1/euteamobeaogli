@@ -1,0 +1,46 @@
+main {
+    background: #171919; /* Fundo escuro */
+    color: #f8f9fa; /* Texto claro */
+    font-family: 'Josefin Sans', sans-serif; /* Fonte personalizada */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:auto;
+    padding-bottom: 5rem;
+    padding-top: 2rem;
+}
+
+#main-playlist {
+    text-align: center;
+    padding: 2rem;
+}
+
+#main-playlist:not(:first-child) {
+  margin-bottom: 2rem;
+}
+
+#main-title {
+    color: #f8f9fa;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+.main-text {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    max-width: 37.5rem;
+    margin: 0 auto 2rem;
+}
+
+#saturno {
+    margin-top:3rem;
+    margin-bottom:2rem;
+    font-size: 1.2rem;
+}   
+
+.josefin-sans-font {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}

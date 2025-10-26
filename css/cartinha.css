@@ -1,0 +1,208 @@
+body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(165deg, #000000, #1b1c1d, #313435);
+            color: #666363;
+            padding: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            display:flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            text-align: center;
+        }
+
+        .carta {
+      background: linear-gradient(to bottom, #ddd0b1, #e1c199, #c7a17a); /* degradê terroso */
+      border-radius: 0.938rem;
+      padding: 2.5rem;
+      max-width: 43.75rem;
+      box-shadow: 0 0 1.875rem rgba(0,0,0,0.3);
+      text-align: center;
+      color: #3c2f2f;
+      border: 0.125rem solid #b2965a;
+    }
+
+    .carta h1 {
+        background: none;
+        font-family: 'Brush Script MT', cursive;
+      color: #8b4513;
+      font-size: 2rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .carta p {
+    background: none;
+        font-family: 'Times New Roman', serif;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 0.938rem;
+    }
+
+    .carta p:last-child {
+        background: none;
+        margin-top: 1.875rem;
+        font-size: 1.2rem;
+        color: #8b4513;
+        font-weight:bold;
+        font-style: italic;
+    }
+
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(1.875rem); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .contador {
+        background: linear-gradient(#330505, #6e0b0b);
+        padding: 2.5rem;
+        border-radius: 1.25rem;
+        box-shadow: 0 0.625rem 1.25rem rgba(0,0,0,0.1);
+        }
+        #euteamo {
+        color: #d6336c;
+        background: none;
+        }
+        #tempo {
+        background: none; 
+        font-size: 1.5rem;
+        margin-top: 0.625rem;
+        }
+
+        #botao {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40vh;
+            background: none;/* só pra simular o fundo escuro igual o seu */
+            margin-top: 1rem;
+        }
+    
+        #iniciar {
+            display: flex;
+            padding: 1.25rem 1.25rem;
+            font-size: 1.3em;
+            background-color: transparent;
+            color: #2c76b3;
+            border: 0.18rem solid #2c76b3;
+            border-radius: 0.625rem;
+            cursor: pointer;
+            align-items: center;
+            font-weight: 600;
+            transition: background-color 0.5s, color 0.3s;
+        }
+
+        #iniciar:hover {
+            background-color: #77bdff27;
+            color: #fff;
+        }
+
+        @media screen and (max-width: 600px) {
+  body {
+    padding: 1.2rem;
+    gap: 1rem;
+    background-color: #171919;
+    height:100%;
+    padding-top:30rem;
+    padding-bottom:50rem;
+  }
+
+  .carta {
+    padding: 1.5rem;
+    max-width: 95vw;
+    font-size: 0.95rem;
+  }
+
+  .carta h1 {
+    font-size: 1.6rem;
+  }
+
+  .carta p {
+    font-size: 1rem;
+  }
+
+  .carta p:last-child {
+    font-size: 1.1rem;
+  }
+
+  .contador {
+    margin-top:50rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  #tempo {
+    font-size: 1.2rem;
+  }
+
+  #botao {
+    height: auto;
+    margin-top: 1.5rem;
+    margin-bottom:30rem;
+  }
+
+  #iniciar {
+    font-size: 1.1rem;
+    padding: 1rem 1.2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .carta {
+    padding: 1.2rem;
+  }
+
+  .carta h1 {
+    font-size: 1.4rem;
+  }
+
+  .carta p {
+    font-size: 0.95rem;
+  }
+
+  .carta p:last-child {
+    font-size: 1rem;
+  }
+
+  #tempo {
+    font-size: 1.1rem;
+  }
+
+  #iniciar {
+    font-size: 1rem;
+    padding: 0.9rem 1rem;
+  }
+}
+
+/* Super pequenos (ex: 320px ou menos) */
+@media screen and (max-width: 330px) {
+  body {
+    padding: 0.8rem;
+  }
+
+  .carta {
+    padding: 1rem;
+  }
+
+  .carta h1 {
+    font-size: 1.2rem;
+  }
+
+  .carta p {
+    font-size: 0.9rem;
+  }
+
+  .carta p:last-child {
+    font-size: 0.95rem;
+  }
+
+  #tempo {
+    font-size: 1rem;
+  }
+
+  #iniciar {
+    font-size: 0.95rem;
+    padding: 0.8rem 0.9rem;
+  }
+}

@@ -1,0 +1,27 @@
+#botao {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 33vh;
+      background: none;/* só pra simular o fundo escuro igual o seu */
+      margin-top: -7rem;
+    }
+    
+    #iniciar {
+        display: flex;
+        padding: 1.25rem 1.25rem;
+        font-size: 1.3em;
+        background-color: transparent;
+        color: #2c76b3;
+        border: 0.18rem solid #2c76b3;
+        border-radius: 0.625rem;
+        cursor: pointer;
+        align-items: center;
+        font-weight: 600;
+        transition: background-color 0.5s, color 0.3s;
+    }
+
+    #iniciar:hover {
+        background-color: #77bdff27;
+        color: #fff;
+    }
