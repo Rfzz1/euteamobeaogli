@@ -18,7 +18,7 @@
   </div>
 
   <script>
-    const inicio = new Date("2025-03-29T20:00:00"); // 💡 Mude para a data e hora que quiser
+    const inicio = new Date("2025-03-29T20:00:00");
     const tempo = document.getElementById("tempo");
 
     function atualizarContador() {
@@ -38,7 +38,7 @@
       const restoMin = minutos % 60;
       const restoSeg = segundos % 60;
 
-      tempo.innerText = `${restoMeses} meses, ${restoDias} dias, ${restoHoras} horas, ${restoMin} minutos e ${restoSeg} segundos.`;
+      tempo.innerText = `${anos} anos, ${restoMeses} meses, ${restoDias} dias, ${restoHoras} horas, ${restoMin} minutos e ${restoSeg} segundos.`;
     }
 
     atualizarContador();
